@@ -237,7 +237,7 @@ function App(){
           for(let b=1;b<=6;b++){
             if(tiltRow[b-1]==null)continue;
             const snapped=(Math.round(tiltRow[b-1]*2)/2).toFixed(1);
-            if(TILT_OPTIONS.includes(String(Number(snapped))))newTilts[b]=snapped;
+            if(TILT_OPTIONS.includes(snapped))newTilts[b]=snapped;
           }
           if(Object.keys(newTilts).length>0)setTilts(p=>({...p,...newTilts}));
         }
